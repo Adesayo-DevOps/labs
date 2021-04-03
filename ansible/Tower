@@ -11,6 +11,8 @@
    12  ./install/installDocker.sh
    13  cd
    14  git clone https://github.com/ansible/awx.git
+   # wget https://github.com/ansible/awx/archive/refs/tags/17.0.1.tar.gz
+   # tar -xvf 17.0.1.tar.gz
    15  cd awx/installer/
    16  ls
    17  ansible --version
