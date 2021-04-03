@@ -24,7 +24,8 @@
    23  cd installer/
    32  apt install python3-docker
    38  apt-get install python3-pip
-   39  pip3 install docker-compose
        python3 -m pip install -U pip
+   39  pip3 install docker-compose
+       
    40  ansible-playbook -i inventory install.yml 
    docker ps
