@@ -1,8 +1,7 @@
-- hosts: aws
+- hosts: rome
   become: yes
   tasks:
   - name: Check that the file exists
-    stat:
       path: /tmp/file.txt
     register: stat_result
 
