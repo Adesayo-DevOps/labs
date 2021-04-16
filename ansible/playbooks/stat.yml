@@ -1,4 +1,4 @@
-- hosts: rome
+- hosts: all
   become: yes
   tasks:
 #  - name: Check that the file exists
