@@ -1,0 +1,14 @@
+sudo chown jenkins:jenkins /opt/deploy
+cd /opt/deploy
+sudo cp /home/kub/1/workspace/pack/target/petclinic.war .
+sudo touch Dockerfile
+sudo chown jenkins:jenkins Dockerfile
+sudo cat <<EOT>> Dockerfile
+FROM tomcat:8.5
+ADD petclinic.war /usr/local/tomcat/webapps
+CMD "catalina.sh""run"
+EXPOSE 8080
+EOT
+sudo docker build -t adesayodevops/kub:$BUILD_NUMBER .
+sudo docker login -u adesayodevops -p Folible01
+sudo docker push adesayodevops/kub:$BUILD_NUMBER
