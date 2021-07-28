@@ -1,0 +1,7 @@
+---
+- hosts: jenkins_jenkins
+  become: yes
+  tasks:
+    - name: clear docker images
+      shell:
+              docker system prune -f
