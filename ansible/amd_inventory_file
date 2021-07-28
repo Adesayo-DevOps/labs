@@ -1,0 +1,34 @@
+[jenkins_jenkins]
+
+10.216.151.60
+10.216.51.182
+10.216.51.178
+10.216.51.177
+10.216.51.176
+10.216.151.45
+10.216.51.128
+10.216.51.187
+10.216.51.134
+10.216.151.252
+10.216.151.58
+10.216.51.120
+10.216.151.56
+10.216.51.126
+10.216.151.56
+10.216.51.179
+10.216.51.128
+10.216.163.179
+10.216.162.250
+10.216.161.187
+10.216.160.190
+10.216.160.135
+
+[jenkins_jenkins:vars]
+ansible_user=jenkins
+ansible_password=atitech
+
+
+command : sudo apt install sshpass
+
+command : ansible-playbook -i H docker_clear.yml
+command : ansible-playbook -i H free2.yml
